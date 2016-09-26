@@ -1,4 +1,4 @@
-# Rails Church!
+# [Rails Church!](http://www.railschurch.com)
 ## A blog for rails tips and tricks
 
 ### Functionality Structure
