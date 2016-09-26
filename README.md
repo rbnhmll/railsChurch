@@ -1,5 +1,5 @@
 # [Rails Church!](http://www.railschurch.com)
-*_A blog for rails tips and tricks_*
+*_A blog for rails tips-and-tricks_*
 
 ## Functionality Structure
 
@@ -7,7 +7,6 @@
 	* belongs_to :user
 	* Title
 	* Content
-	*
 
 #### Model::User
 	* has_many :posts
