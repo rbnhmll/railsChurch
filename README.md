@@ -5,8 +5,9 @@
 
 #### Model::Post
 	* belongs_to :user
-	* Title
-	* Content
+	* Title :string
+	* Content :text
+	* Active :boolean
 
 #### Model::User
 	* has_many :posts
