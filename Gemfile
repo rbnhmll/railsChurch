@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'better_errors'
+gem 'bourbon', '~> 4.2', '>= 4.2.7'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'dotenv-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+gem 'neat', '~> 1.8'
 gem 'rails', '4.2.5.1'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks'
