@@ -1,7 +1,7 @@
 # [Rails Church!](http://www.railschurch.com)
-## A blog for rails tips and tricks
+*_A blog for rails tips and tricks_*
 
-### Functionality Structure
+## Functionality Structure
 
 #### Model::Post
 	* belongs_to :user
@@ -12,4 +12,4 @@
 #### Model::User
 	* has_many :posts
 
-#### Model::MailingList
+<!-- #### Model::MailingList -->
