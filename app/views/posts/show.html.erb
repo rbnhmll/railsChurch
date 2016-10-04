@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= image_tag @post.lead_image.url() %>
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Active:</strong>
-  <%= @post.active %>
+  Active? <%= @post.active %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
