@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h2>Blog Posts listing</h2>
+<p>Some things I learned or figured out about Rails along the way</p>
 
 <div class="blog">
 	<% @posts.each do |post| %>
@@ -8,13 +9,14 @@
 		  <h2 class="blog__title"><%= post.title %></h2>
 		  <small><%= post.created_at.strftime("%m/%d/%Y") %></small>
 		  <p class="blog__content"><%= post.content %></p>
+		  <%= link_to 'Read more', post %>
 		  <% if user_signed_in? %>
-			  <%= link_to 'Show', post %>
 			  <%= link_to 'Edit', edit_post_path(post) %>
 			  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
 			 <% end %>
 	  </div>
 	<% end %>
+	<%= will_paginate @posts %>
 </div>
 
 <% if user_signed_in? %>
