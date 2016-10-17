@@ -8,12 +8,39 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="wrapper">
-
+	<header>
+		<div class="wrapper">
+			<h1 class="logo">Rails Church</h1>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li><a href="">About</a></li>
+					<li><a href="">Link 2</a></li>
+					<li><a href="">Link 3</a></li>
+					<% if user_signed_in? %>
+					  <li>
+					  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+					  </li>
+					<% else %>
+					  <li>
+					  <%= link_to('Login', new_user_session_path)  %>  
+					  </li>
+					<% end %>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<section class="wrapper">
 		<!-- <p class="notice"><%= notice %></p>
 		<p class="alert"><%= alert %></p> -->
+		<%= yield %>
+	</section>
 
-	<%= yield %>
-	</div>
+	<footer class="footer">
+		<div class="wrapper">
+			<p>Rails Church &copy; Robin Hamill <%= Time.now.year %></p>
+		</div>
+	</footer>
+
 </body>
 </html>

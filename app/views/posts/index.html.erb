@@ -6,13 +6,17 @@
 	<% @posts.each do |post| %>
 	  <div class="blog__post">
 		  <h2 class="blog__title"><%= post.title %></h2>
+		  <small><%= post.created_at.strftime("%m/%d/%Y") %></small>
 		  <p class="blog__content"><%= post.content %></p>
-		  <p class="blog__active"><%= post.active %></p>
-		  <%= link_to 'Show', post %>
-		  <%= link_to 'Edit', edit_post_path(post) %>
-		  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+		  <% if user_signed_in? %>
+			  <%= link_to 'Show', post %>
+			  <%= link_to 'Edit', edit_post_path(post) %>
+			  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+			 <% end %>
 	  </div>
 	<% end %>
 </div>
 
-<%= link_to 'New Post', new_post_path %>
+<% if user_signed_in? %>
+	<%= link_to 'New Post', new_post_path, class:'btn' %>
+<% end %>
