@@ -1,12 +1,16 @@
 .blog
-	+display(flex)
-	flex-wrap: wrap
-	justify-content: space-between
+	+row()
 
 .blog__post
-	width: 32%
+	+span-columns(4)
 	border: rem(1) solid black
 	padding: rem(20)
 	margin-bottom: rem(25)
+	+omega(3n)
+	
 	+media (max-width $medium-screen)
-		width: 100%
+		+span-columns(6)
+		+omega(2n)
+
+	+media (max-width $small-screen)
+		+span-columns(12)
