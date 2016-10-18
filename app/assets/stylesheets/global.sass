@@ -1,21 +1,38 @@
+body
+	+display(flex)
+	flex-direction: column
+	min-height: 100vh
+
+a
+	color: $black
+
+	&:hover
+		color: $white
+		background-color: $black
+
+p
+
 .wrapper
 	+outer-container($max-width)
+	flex: 1
+	padding: 0 25px
 
 header
 	padding: rem(25) 0
 	background-color: $dark-grey
 	color: $white
 
-header .wrapper
-	+display(flex)
-	justify-content: space-between
-	align-items: center
-
 .logo
 	margin: 0
+	float: left
 
-nav ul
-	+display(flex)
+nav
+	float: right
+	margin-top: rem(7)
+	ul
+		+display(flex)
+
+
 	a,
 	a:visited
 		color: $white

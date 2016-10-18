@@ -6,7 +6,9 @@
 <div class="blog">
 	<% @posts.each do |post| %>
 	  <div class="blog__post">
-		  <h2 class="blog__title"><%= post.title %></h2>
+		  <%= link_to post do %>
+			  <h2 class="blog__title"><%= post.title %></h2>
+		  <% end %>
 		  <small><%= post.created_at.strftime("%m/%d/%Y") %></small>
 		  <p class="blog__content"><%= post.content %></p>
 		  <%= link_to 'Read more', post %>
