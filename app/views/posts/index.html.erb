@@ -7,18 +7,21 @@
 	<% @posts.each do |post| %>
 	  <div class="blog__post">
 		  <%= link_to post do %>
-			  <h2 class="blog__title"><%= post.title %></h2>
+				<div class="blog content">
+				  <h2 class="blog__title"><%= post.title %></h2>
+				  <small><%= post.created_at.strftime("%m/%d/%Y") %></small>
+				  <p class="blog__content"><%= post.content %></p>
+				</div>
 		  <% end %>
-		  <small><%= post.created_at.strftime("%m/%d/%Y") %></small>
-		  <p class="blog__content"><%= post.content %></p>
-		  <%= link_to 'Read more', post %>
 		  <% if user_signed_in? %>
 			  <%= link_to 'Edit', edit_post_path(post) %>
 			  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-			 <% end %>
+			<% end %>
 	  </div>
 	<% end %>
+
 	<%= will_paginate @posts %>
+
 </div>
 
 <% if user_signed_in? %>
