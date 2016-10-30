@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<%= image_tag @post.lead_image.url() %>
+<%= image_tag @post.lead_image.url :full %>
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -7,13 +7,16 @@
 
 <p>
   <strong>Content:</strong>
-  <%= simple_format @post.content %>
+  <%= raw @post.content %>
 </p>
 
-<p>
-  <strong>Active:</strong>
-  Active? <%= @post.active %>
-</p>
+<% if user_signed_in? %>
+	<p>
+	  <strong>Active:</strong>
+	  <%= @post.active %>
+	</p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+	<%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
+
 <%= link_to 'Back', posts_path %>
