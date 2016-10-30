@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 	has_attached_file :lead_image,
-		:default_url => "_.jpg",
+		:default_url => "hero_pattern.png",
 		styles: {
 			full: "1200x1200",
 			large: "800x800",

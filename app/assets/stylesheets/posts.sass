@@ -6,12 +6,13 @@
 .blog__post
 	+span-columns(4)
 	+omega(3n)
-	border: rem(1) solid black
+	border: rem(1) solid rgba(0,0,0,0.22)
 	margin-bottom: rem(25)
 	// padding: rem(20)
 	transition: .3s cubic-bezier(.09,.33,.25,1.19) all
 	&:hover
 		transform: translateY(-5px)
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 	
 	+media (max-width $medium-screen)
 		+omega(2n)
@@ -23,7 +24,7 @@
 
 .blog__image
 	height: 200px
-	background-size: contain
+	background-size: cover
 	background-position: center
 
 .blog__text

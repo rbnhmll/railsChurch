@@ -4,7 +4,7 @@
 	  <div class="blog__post">
 		  <%= link_to post do %>
 				<div class="blog__content">
-				<div class="blog__image" style="background-image: url(<%= post.lead_image :medium %>)"></div>
+				<div class="blog__image" style="background-image: url(<%= asset_path(post.lead_image :medium) %>)"></div>
 					<!-- <%= image_tag post.lead_image :medium %> -->
 				  <div class="blog__text">
 				  	<h2 class="blog__title"><%= post.title %></h2>

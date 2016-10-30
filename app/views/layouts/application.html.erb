@@ -33,10 +33,12 @@
 	</header>
 
 	<div class="wrapper">
+	<% if current_page?(root_path) %>
 		<section class="hero">
 			<h1 class="hero__title">Rails Church: Naive explorations in rails for developers</h1>
 			<p class="hero__tagline">Stream of consciousness adventures in rails, for better or worse</p>
 		</section>
+	<% end %>	
 	
 		<section>
 			<p class="notice"><%= notice %></p>
@@ -53,5 +55,10 @@
 		</div>
 	</footer>
 
+	<script>
+	  jQuery(document).ready(function($){
+	    Rainbow.color();
+	  });
+	</script>
 </body>
 </html>
