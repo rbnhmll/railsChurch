@@ -21,12 +21,14 @@ $base-z-index: 0;
 $white: #FDFDFD;
 $blue: #1565c0;
 $green: #8BC34A;
+$red: #F44336;
 $dark-grey: #333;
 $medium-grey: #999;
 $light-grey: #F5F5F5;
 $black: #212121;
 $safe: $green;
-$danger: #F44336;
+$caution: #FFC107;
+$danger: $red;
 
 // Font Colors
 $base-font-color: $dark-grey;

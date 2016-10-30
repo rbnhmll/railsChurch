@@ -19,16 +19,16 @@ div
 		margin-bottom: 10px
 
 #notice
-	color: green
+	color: $green
 
 .field_with_errors
 	padding: 2px
-	background-color: red
+	background-color: $red
 	display: table
 
 #error_explanation
 	width: 450px
-	border: 2px solid red
+	border: 2px solid $red
 	padding: 7px
 	padding-bottom: 0
 	margin-bottom: 20px
@@ -41,7 +41,7 @@ div
 		font-size: 12px
 		margin: -7px
 		margin-bottom: 0px
-		background-color: #c00
+		background-color: $red
 		color: $white
 
 .header
@@ -83,11 +83,18 @@ nav
 
 footer
 	background-color: $dark-grey
+
+.footer__copy,
+.footer__copy a
 	color: $white
-	p
-		text-align: center
-		padding: rem(20) 0
-		margin: 0
+	text-align: center
+	padding: rem(20) 0
+	margin: 0
+	font-size: rem(12)
+
+.footer__copy a
+	&:hover
+		text-decoration: underline
 
 pre
 	padding: 25px
