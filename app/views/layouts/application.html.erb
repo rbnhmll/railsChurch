@@ -34,11 +34,9 @@
 		</div>
 	</header>
 	<div class="wrapper">
-	
 		<section>
 			<p class="notice"><%= notice %></p>
 			<p class="alert"><%= alert %></p>
-			<!-- <p id="notice"><%= notice %></p> -->
 
 			<%= yield %>
 
@@ -46,9 +44,9 @@
 	</div> <!-- /.wrapper -->
 
 	<footer class="footer">
-		<div class="wrapper">
+		<div class="footer__wrapper wrapper">
 			<p class="footer__copy"><i class="fa fa-diamond" aria-hidden="true"></i>
- Rails Church &copy; <%= link_to "Robin Hamill", "http://www.robinhamill.ca" %> <%= Time.now.year %></p>
+ Rails Church &copy; <%= link_to "Robin Hamill", "http://www.robinhamill.ca", target: '_blank' %> <%= Time.now.year %></p>
 		</div>
 	</footer>
 
