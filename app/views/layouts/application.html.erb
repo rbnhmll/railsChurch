@@ -3,6 +3,7 @@
 <head>
   <title>Rails Church</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Quattrocento" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,8 +11,11 @@
 <body>
 	<header>
 		<div class="wrapper">
-			<%= link_to root_path do %>
-				<h1 class="logo">Rails Church</h1>
+			<%= link_to root_path, class: 'logo' do %>
+				<div class="logo__image">
+					<%= image_tag 'rails_church.png', alt: 'Rails Church Logo' %>
+				</div> 
+				<h1 class="logo__text"> Rails Church</h1>
 			<% end %>
 			<nav class="nav">
 				<ul class="nav__list">
@@ -31,7 +35,6 @@
 			</nav>
 		</div>
 	</header>
-
 	<div class="wrapper">
 	<% if current_page?(root_path) %>
 		<section class="hero">
@@ -44,8 +47,9 @@
 			<p class="notice"><%= notice %></p>
 			<p class="alert"><%= alert %></p>
 			<!-- <p id="notice"><%= notice %></p> -->
-			
+
 			<%= yield %>
+
 		</section>
 	</div>
 

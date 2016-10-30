@@ -1,8 +1,8 @@
 body
 	+display(flex)
+	background-color: #F5F5F5
 	flex-direction: column
 	min-height: 100vh
-	background-color: #F5F5F5
 
 .wrapper
 	width: 95%
@@ -57,9 +57,19 @@ header
 	color: $white
 
 .logo
-	margin: 0
-	float: left
+	+display(flex)
+	align-items: flex-end
 	color: $white
+	float: left
+	font-size: 25px
+	margin: 0
+	&:hover
+		color: $white
+	&__image
+		width: rem(50)
+	&__text
+		margin-bottom: 0
+		margin-left: rem(20)
 
 nav
 	float: right
