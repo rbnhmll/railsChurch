@@ -3,15 +3,26 @@
 
 .blog__post
 	+span-columns(4)
-	border: rem(1) solid black
-	padding: rem(20)
-	margin-bottom: rem(25)
 	+omega(3n)
+	border: rem(1) solid black
+	margin-bottom: rem(25)
+	// padding: rem(20)
+	transition: .3s cubic-bezier(.09,.33,.25,1.19) all
+	&:hover
+		transform: translateY(-5px)
 	
 	+media (max-width $medium-screen)
+		+omega(2n)
 		+omega-reset(3n)
 		+span-columns(6)
-		+omega(2n)
 
 	+media (max-width $small-screen)
 		+span-columns(12)
+
+.blog__image
+	height: 200px
+	background-size: contain
+	background-position: center
+
+.blog__text
+	padding: rem(20)

@@ -31,32 +31,27 @@
 			</nav>
 		</div>
 	</header>
+
+	<div class="wrapper">
+		<section class="hero">
+			<h1 class="hero__title">Rails Church: Naive explorations in rails for developers</h1>
+			<p class="hero__tagline">Stream of consciousness adventures in rails, for better or worse</p>
+		</section>
 	
-	<section class="wrapper">
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
-		<!-- <p id="notice"><%= notice %></p> -->
-		
-		<%= yield %>
-	</section>
+		<section>
+			<p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
+			<!-- <p id="notice"><%= notice %></p> -->
+			
+			<%= yield %>
+		</section>
+	</div>
 
 	<footer class="footer">
 		<div class="wrapper">
 			<p>Rails Church &copy; Robin Hamill <%= Time.now.year %></p>
 		</div>
 	</footer>
-
-	<pre><code data-language="html">
-		<li><a href="">About</a></li>
-		<li><a href="">Link 2</a></li>
-		<li><a href="">Link 3</a></li>
-	</code></pre>
-
-<pre><code data-language="ruby">
-	def content_preview
-		self.content.truncate(225, separator: ' ')
-	end
-</code></pre>
 
 </body>
 </html>
