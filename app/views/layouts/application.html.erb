@@ -3,14 +3,15 @@
 <head>
   <title>Rails Church</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Quattrocento" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
-		<div class="wrapper">
+	<header class="header">
+		<div class="wrapper header__wrapper">
 			<%= link_to root_path, class: 'logo' do %>
 				<div class="logo__image">
 					<%= image_tag 'rails_church.png', alt: 'Rails Church Logo' %>
@@ -19,9 +20,6 @@
 			<% end %>
 			<nav class="nav">
 				<ul class="nav__list">
-					<li><a href="">About</a></li>
-					<li><a href="">Link 2</a></li>
-					<li><a href="">Link 3</a></li>
 					<% if user_signed_in? %>
 					  <li>
 					  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
@@ -36,12 +34,6 @@
 		</div>
 	</header>
 	<div class="wrapper">
-	<% if current_page?(root_path) %>
-		<section class="hero">
-			<h1 class="hero__title">Rails Church: Naive explorations in rails for developers</h1>
-			<p class="hero__tagline">Stream of consciousness adventures in rails, for better or worse</p>
-		</section>
-	<% end %>	
 	
 		<section>
 			<p class="notice"><%= notice %></p>
@@ -51,7 +43,7 @@
 			<%= yield %>
 
 		</section>
-	</div>
+	</div> <!-- /.wrapper -->
 
 	<footer class="footer">
 		<div class="wrapper">

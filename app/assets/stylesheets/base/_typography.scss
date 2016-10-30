@@ -5,7 +5,7 @@ body {
   line-height: $base-line-height;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,label {
   font-family: $heading-font-family;
   // font-size: $base-font-size;
   line-height: $heading-line-height;
@@ -28,7 +28,7 @@ p {
 }
 
 a {
-  color: $action-color;
+  color: $black;
   text-decoration: none;
   transition: color $base-duration $base-timing;
 

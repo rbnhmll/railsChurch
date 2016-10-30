@@ -1,3 +1,7 @@
+<section class="hero">
+	<h1 class="hero__title">Rails Church: Naive explorations in rails for developers</h1>
+	<p class="hero__tagline">Stream of consciousness adventures in rails, for better or worse</p>
+</section>
 <div class="blog">
 	<% if @posts.length > 0 %>
 	<% @posts.each do |post| %>
@@ -8,14 +12,14 @@
 					<!-- <%= image_tag post.lead_image :medium %> -->
 				  <div class="blog__text">
 				  	<h2 class="blog__title"><%= post.title %></h2>
-				  	<small><%= post.created_at.strftime("%m/%d/%Y") %></small>
+				  	<!-- <small><%= post.created_at.strftime("%m/%d/%Y") %></small> -->
 				  	<p class="blog__content"><%= post.content_preview %></p>
 				  </div>
 				</div>
 		  <% end %>
 		  <% if user_signed_in? %>
-			  <%= link_to 'Edit', edit_post_path(post) %>
-			  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+			  <%= link_to 'Edit', edit_post_path(post), class: 'btn btn--safe' %>
+			  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn--danger' %>
 			<% end %>
 	  </div>
 	<% end %>
@@ -23,10 +27,12 @@
 		<p>Sorry, nothing to see here, yet. Please check back soon.</p>
 	<% end %>
 
-	<%= will_paginate @posts %>
+</div>
 
+<div class="apple_pagination">
+	<%= will_paginate @posts, :previous_label => '<i class="fa fa-angle-double-left"></i>', :next_label => '<i class="fa fa-angle-double-right"></i>' %>
 </div>
 
 <% if user_signed_in? %>
-	<%= link_to 'New Post', new_post_path, class:'btn' %>
+	<%= link_to 'New Post', new_post_path, class:'btn btn--safe' %>
 <% end %>

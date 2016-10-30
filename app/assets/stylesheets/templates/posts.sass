@@ -1,8 +1,5 @@
 .blog
-	+row()
-	background: #fff
-	padding: 5%
-	margin-bottom: rem(20)
+	+section
 
 .blog__post
 	+span-columns(4)
@@ -12,6 +9,8 @@
 	&:hover
 		+g-shadow
 		transform: translateY(-3px)
+	a
+		color: $black
 	
 	+media (max-width $medium-screen)
 		+omega(2n)
@@ -36,3 +35,6 @@
 	
 	+media (max-width $medium-screen)
 		min-height: rem(175)
+
+.lead_image
+	margin-top: rem(20)

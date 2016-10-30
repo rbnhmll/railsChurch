@@ -1,22 +1,25 @@
-<p id="notice"><%= notice %></p>
-<%= image_tag @post.lead_image.url :full %>
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= raw @post.content %>
-</p>
-
-<% if user_signed_in? %>
-	<p>
-	  <strong>Active:</strong>
-	  <%= @post.active %>
-	</p>
-
-	<%= link_to 'Edit', edit_post_path(@post) %> |
-<% end %>
-
-<%= link_to 'Back', posts_path %>
+<section>
+	<%= image_tag @post.lead_image.url(:full), class: "lead_image" %>
+</section>
+<div class="blog">
+	<h2 class="blog__title">
+	  <%= @post.title %>
+	</h2>
+	<!-- <small><%= @post.created_at.strftime("%Y-%m-%d") %></small> -->
+	
+	<div class="blog__content">
+		<%= raw @post.content %>
+	</div>
+	
+	<% if user_signed_in? %>
+		<p>
+		  <strong>Active:</strong>
+		  <%= @post.active %>
+		</p>
+	
+		<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn--safe' %>
+	<% end %>
+	
+	<%= link_to 'Back', posts_path, class: 'btn' %>
+</div>

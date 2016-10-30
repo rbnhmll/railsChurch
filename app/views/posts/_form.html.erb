@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :lead_image %><br>
+    <%= f.label :lead_image %>
     <%= image_tag(@post.lead_image :medium) %>
     <%= f.file_field :lead_image %>
   </div>
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content, rows: "15" %>
+    <%= f.label :content %>
+    <%= f.text_area :content, rows: "20" %>
   </div>
-  <div class="field">
-    <%= f.label :active %>
-    <%= f.check_box :active %>
+  <div class="field active">
+    <%= f.label :active, class: "active__label" %>
+    <%= f.check_box :active, class: "active__check" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn--safe' %>
   </div>
 <% end %>
