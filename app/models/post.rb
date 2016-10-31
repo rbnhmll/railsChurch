@@ -10,8 +10,11 @@ class Post < ActiveRecord::Base
 
 	belongs_to :user
 
+	# A truncation  and sanitation method for Post.content
 	def content_preview
+		# Sanitize Post.content to remove HTML tags
 		cp = Rails::Html::FullSanitizer.new.sanitize(self.content)
+		# Shorten content to set char count
 		cp.truncate(225, separator: ' ')
 	end
 
