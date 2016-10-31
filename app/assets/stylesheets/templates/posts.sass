@@ -26,7 +26,7 @@
 	height: 200px
 
 .blog__text
-	padding: rem(20) rem(20) 0 rem(20)
+	padding: rem(20)
 	border: rem(1) solid #f5f5f5
 	border-top: none
 
@@ -35,10 +35,11 @@
 
 .blog__content
 	+display(inline-block)
-	min-height: rem(200)
-	
+	min-height: rem(220)
 	+media (max-width $medium-screen)
 		min-height: rem(175)
+	+media (max-width $small-screen)
+		min-height: rem(100)
 
 .lead_image
 	margin-top: rem(20)
