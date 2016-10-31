@@ -10,6 +10,7 @@
 		+g-shadow
 		transform: translateY(-3px)
 	a
+		+display(inline-block)
 		color: $black
 	
 	+media (max-width $medium-screen)
@@ -40,6 +41,11 @@
 		min-height: rem(175)
 	+media (max-width $small-screen)
 		min-height: rem(100)
+
+.admin__buttons
+	padding: rem(10) rem(20)
+	border: rem(1) solid #f5f5f5
+	border-top: none
 
 .lead_image
 	margin-top: rem(20)

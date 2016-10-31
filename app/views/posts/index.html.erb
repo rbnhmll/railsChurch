@@ -16,8 +16,10 @@
 				</div>
 		  <% end %>
 		  <% if user_signed_in? %>
-			  <%= link_to 'Edit', edit_post_path(post), class: 'btn btn--safe' %>
-			  <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn--danger' %>
+			  <div class="admin__buttons">
+			  	<%= link_to 'Edit', edit_post_path(post), class: 'btn btn--safe' %>
+			  	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn--danger' %>
+		  	</div>
 			<% end %>
 	  </div>
 	<% end %>

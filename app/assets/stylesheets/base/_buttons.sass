@@ -1,9 +1,10 @@
 #{$all-buttons}
+  +transition(background-color $base-duration $base-timing)
   appearance: none
   background-color: $action-color
   border: 0
   border-radius: $base-border-radius
-  color: #fff
+  color: $white
   cursor: pointer
   display: inline-block
   font-family: $base-font-family
@@ -13,7 +14,6 @@
   line-height: 1
   padding: $small-spacing $base-spacing
   text-decoration: none
-  transition: background-color $base-duration $base-timing
   user-select: none
   vertical-align: middle
   white-space: nowrap
@@ -21,7 +21,7 @@
   &:hover,
   &:focus
     background-color: shade($action-color, 20%)
-    color: #fff
+    color: $white
 
   &:disabled
     cursor: not-allowed
@@ -49,11 +49,8 @@ input.btn
   padding: 10px 14px
   text-align: center
   text-transform: uppercase
+  +transition(all .15s ease-in-out)
 
-  transition: all .15s ease-in-out
-  -o-transition: all .15s ease-in-out
-  -moz-transition: all .15s ease-in-out
-  -webkit-transition: all .15s ease-in-out
   &:hover
     +g-shadow
     background-color: $dark-grey
