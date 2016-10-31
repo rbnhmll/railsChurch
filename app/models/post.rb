@@ -11,7 +11,8 @@ class Post < ActiveRecord::Base
 	belongs_to :user
 
 	def content_preview
-		self.content.truncate(225, separator: ' ')
+		cp = Rails::Html::FullSanitizer.new.sanitize(self.content)
+		cp.truncate(225, separator: ' ')
 	end
 
 end
