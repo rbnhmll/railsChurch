@@ -17,8 +17,8 @@
 		  <% end %>
 		  <% if user_signed_in? %>
 			  <div class="admin__buttons">
-			  	<%= link_to 'Edit', edit_post_path(post), class: 'btn btn--safe' %>
-			  	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn--danger' %>
+			  	<%= link_to 'Edit', edit_post_path(post), class: 'btn btn--safe btn--small' %>
+			  	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn--danger btn--small' %>
 		  	</div>
 			<% end %>
 	  </div>
