@@ -40,6 +40,7 @@
 			<p class="alert"><%= alert %></p>
 
 			<%= yield %>
+			<%= insert_paloma_hook %>
 
 		</section>
 	</div> <!-- /.wrapper -->
@@ -53,7 +54,7 @@
 
 	<script>
 	  jQuery(document).ready(function($){
-	    Rainbow.color();
+		  Paloma.start();
 	  });
 	</script>
 </body>
