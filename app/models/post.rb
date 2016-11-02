@@ -7,6 +7,8 @@ class Post < ActiveRecord::Base
 			medium: "400x400>",
 			thumb: "100x100>" }
   validates_attachment_content_type :lead_image, content_type: /\Aimage\/.*\z/
+  validates :content, presence: true
+  validates :title, presence: true
 
 	belongs_to :user
 
