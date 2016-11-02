@@ -11,6 +11,7 @@ gem 'font-awesome-rails', '~> 4.7'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'neat'
+gem 'paloma', '~> 5.0'
 gem "paperclip", "~> 4.3"
 gem 'rails', '4.2.5.1'
 gem 'sass-rails', '~> 5.0'
