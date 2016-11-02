@@ -1,12 +1,12 @@
-var InvitesController = Paloma.controller('Posts');
+var PostsController = Paloma.controller('Posts');
 
-InvitesController.prototype.new = function(){
+PostsController.prototype.new = function(){
 };
 
-InvitesController.prototype.edit = function(){
+PostsController.prototype.edit = function(){
 };
 
-InvitesController.prototype.show = function(){
+PostsController.prototype.show = function(){
 	(function(){
 	    Rainbow.color();
 	})();
