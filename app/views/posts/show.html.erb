@@ -22,4 +22,10 @@
 	<% end %>
 	
 	<%= link_to 'Back', posts_path, class: 'btn' %>
+
+	<% unless @post.active %>
+		<div class="unpublished">
+			<div class="unpublished__banner unpublished__banner--show">Inactive</div>
+		</div>
+	<% end %>
 </article>
