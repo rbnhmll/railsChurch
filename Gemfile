@@ -23,6 +23,7 @@ gem 'wysiwyg-rails'
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.5'
 	gem 'sqlite3'
   gem 'spring'
   gem 'web-console', '~> 2.0'
