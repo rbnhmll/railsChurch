@@ -20,4 +20,12 @@ class Post < ActiveRecord::Base
 		cp.truncate(225, separator: ' ')
 	end
 
+	scope :active, -> {
+	  where(:active => true)
+	}
+
+	scope :inactive, -> {
+	  where(:active => false)
+	}
+
 end

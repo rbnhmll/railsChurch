@@ -15,6 +15,11 @@
 					  </div>
 					</div>
 			  <% end %>
+		  	<% unless post.active %>
+						<div class="unpublished">
+							<div class="unpublished__banner">Inactive</div>
+						</div>
+		  	<% end %>
 			  <% if user_signed_in? %>
 				  <div class="admin__buttons">
 				  	<%= link_to 'Edit', edit_post_path(post), class: 'btn btn--safe btn--small' %>
