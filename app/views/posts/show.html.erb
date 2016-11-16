@@ -1,7 +1,7 @@
 <section>
 	<%= image_tag @post.lead_image.url(:full), class: "lead_image" %>
 </section>
-<div class="blog">
+<article class="blog">
 	<h2 class="blog__title">
 	  <%= @post.title %>
 	</h2>
@@ -22,4 +22,4 @@
 	<% end %>
 	
 	<%= link_to 'Back', posts_path, class: 'btn' %>
-</div>
+</article>

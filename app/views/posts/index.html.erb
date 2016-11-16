@@ -4,25 +4,25 @@
 </section>
 <div class="blog">
 	<% if @posts.length > 0 %>
-	<% @posts.each do |post| %>
-	  <div class="blog__post">
-		  <%= link_to post do %>
-				<div class="blog__container">
-					<div class="blog__image" style="background-image: url(<%= asset_path(post.lead_image :medium) %>)"></div>
-				  <div class="blog__text">
-				  	<h2 class="blog__title"><%= post.title %></h2>
-				  	<span class="blog__content"><%= post.content_preview %></span>
-				  </div>
-				</div>
-		  <% end %>
-		  <% if user_signed_in? %>
-			  <div class="admin__buttons">
-			  	<%= link_to 'Edit', edit_post_path(post), class: 'btn btn--safe btn--small' %>
-			  	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn--danger btn--small' %>
-		  	</div>
-			<% end %>
-	  </div>
-	<% end %>
+		<% @posts.each do |post| %>
+		  <article class="blog__post">
+			  <%= link_to post do %>
+					<div class="blog__container">
+						<div class="blog__image" style="background-image: url(<%= asset_path(post.lead_image :medium) %>)"></div>
+					  <div class="blog__text">
+					  	<h2 class="blog__title"><%= post.title %></h2>
+					  	<span class="blog__content"><%= post.content_preview %></span>
+					  </div>
+					</div>
+			  <% end %>
+			  <% if user_signed_in? %>
+				  <div class="admin__buttons">
+				  	<%= link_to 'Edit', edit_post_path(post), class: 'btn btn--safe btn--small' %>
+				  	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn--danger btn--small' %>
+			  	</div>
+				<% end %>
+		  </article>
+		<% end %>
 	<% elsif %>
 		<p>Sorry, nothing to see here, yet. Please check back soon.</p>
 	<% end %>
