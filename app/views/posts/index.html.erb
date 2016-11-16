@@ -6,7 +6,7 @@
 	<% if @posts.length > 0 %>
 		<% @posts.each do |post| %>
 		  <article class="blog__post">
-			  <%= link_to post do %>
+			  <%= link_to post, class: 'blog__link' do %>
 					<div class="blog__container">
 						<div class="blog__image" style="background-image: url(<%= asset_path(post.lead_image :medium) %>)"></div>
 					  <div class="blog__text">
