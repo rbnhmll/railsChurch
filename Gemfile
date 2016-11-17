@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'autoprefixer-rails'
 gem 'aws-sdk-v1'
 gem 'better_errors'
 gem 'bitters'
@@ -12,12 +13,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'neat'
 gem 'paloma', '~> 5.0'
-gem "paperclip", "~> 4.3"
+gem 'paperclip', '~> 4.3'
 gem 'rails', '4.2.5.1'
 gem 'sass-rails', '~> 5.0'
+gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'will_paginate'
 gem 'wysiwyg-rails'
 
