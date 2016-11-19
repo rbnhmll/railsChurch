@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Rails Church</title>
-  <%= favicon_link_tag asset_path('favicon.png') %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= favicon_link_tag 'favicon.png' %>
   <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Quattrocento|Megrim|Raleway:400,500,600" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -14,7 +14,7 @@
 		<div class="wrapper header__wrapper">
 			<%= link_to root_path, class: 'logo' do %>
 				<div class="logo__image">
-					<%= image_tag asset_path('rails_church.png'), alt: 'Rails Church Logo' %>
+					<%= image_tag 'rails_church.png', alt: 'Rails Church Logo' %>
 				</div> 
 				<h1 class="logo__text"> Rails Church</h1>
 			<% end %>
