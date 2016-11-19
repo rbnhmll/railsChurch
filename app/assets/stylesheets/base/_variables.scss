@@ -1,8 +1,12 @@
 // Typography
 $droid: 'Droid Sans', sans-serif;
+$megrim: 'Megrim', cursive;
 $quatro: 'Quattrocento', serif;
+$raleway: 'Raleway', sans-serif;
+$special-font: $megrim;
 $base-font-family: $quatro;
-$heading-font-family: $droid;
+// $heading-font-family: $droid;
+$heading-font-family: $raleway;
 
 // Font Sizes
 $base-font-size: 1em;
