@@ -17,8 +17,8 @@ body
 	margin-top: rem(20)
 	padding: 8% 10%
 	&__title
-		margin-bottom: 0
 		font-size: rem(65)
+		margin-bottom: 0
 		text-shadow: 5px 5px rgba($white, .75)
 
 .page__title
@@ -37,10 +37,10 @@ div
 	padding: 0
 
 .field_with_errors
-	padding: rem(2)
 	background-color: $red
-	display: block
 	border-radius: rem(5)
+	display: block
+	padding: rem(2)
 
 #error_explanation
 	background-color: #f0f0f0
@@ -67,9 +67,9 @@ div
 	+g-transition
 	background-color: $dark-grey
 	color: $white
+	left: 0
 	padding: rem(20) 0
 	position: fixed
-	left: 0
 	right: 0
 	z-index: 999
 
@@ -109,14 +109,12 @@ div
 		text-transform: uppercase
 
 nav
-	// margin-top: rem(7)
 	ul
 		+display(flex)
 
 	a,
 	a:visited
 		color: $white
-		// padding: 5px
 
 .footer
 	background-color: $dark-grey
