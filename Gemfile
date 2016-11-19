@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'autoprefixer-rails'
 gem 'aws-sdk-v1'
-gem 'better_errors'
 gem 'bitters'
 gem 'bourbon'
 gem 'coffee-rails', '~> 4.1.0'
@@ -23,6 +22,7 @@ gem 'will_paginate'
 gem 'wysiwyg-rails'
 
 group :development, :test do
+	gem 'better_errors'
   gem 'byebug'
   gem 'rspec-rails', '~> 3.5'
 	gem 'sqlite3'
