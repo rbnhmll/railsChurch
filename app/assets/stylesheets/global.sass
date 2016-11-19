@@ -20,6 +20,10 @@ body
 		font-size: rem(65)
 		margin-bottom: 0
 		text-shadow: 5px 5px rgba($white, .75)
+		+media (max-width $medium-screen)
+			font-size: rem(50)
+		+media (max-width $small-screen)
+			font-size: rem(35px)
 
 .page__title
 	margin: 0.75em 5%
@@ -72,6 +76,8 @@ div
 	position: fixed
 	right: 0
 	z-index: 999
+	+media (max-width $small-screen)
+		padding: rem(10)
 
 .header__wrapper
 	+display(flex)
@@ -88,6 +94,7 @@ div
 		font-size: rem(25)
 	.logo__image
 		width: rem(30)
+		margin-left: rem(10)
 
 .logo
 	+display(flex)
@@ -95,11 +102,14 @@ div
 	color: $white
 	font-size: 20px
 	margin: 0
+	padding-top: rem(5)
 	&:hover
 		color: $white
 	&__image
 		+g-transition
 		width: rem(50)
+		+media (max-width $small-screen)
+			width: rem(30)
 	&__text
 		+g-transition
 		font-family: $special-font
@@ -107,11 +117,15 @@ div
 		margin-bottom: 0
 		margin-left: rem(20)
 		text-transform: uppercase
+		+media (max-width $small-screen)
+			font-size: rem(25)
+			margin-left: rem(10)
 
 nav
 	ul
 		+display(flex)
-
+	li
+		margin-left: rem(10)
 	a,
 	a:visited
 		color: $white

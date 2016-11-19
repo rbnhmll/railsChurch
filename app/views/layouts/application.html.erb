@@ -22,7 +22,10 @@
 				<ul class="nav__list">
 					<% if user_signed_in? %>
 					  <li>
-					  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'btn btn--dark btn--small') %>
+							<%= link_to 'New Post', new_post_path, class:'btn btn--safe btn--small btn--dark' %>
+					  </li>
+					  <li>
+						  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'btn btn--dark btn--small') %>
 					  </li>
 					<% end %>
 				</ul>
