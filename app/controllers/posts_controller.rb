@@ -65,10 +65,6 @@ class PostsController < ApplicationController
     end
   end
 
-  def letsencrypt
-    render text: "R3LjF0AEhh2jMBGd8C835N8-IpQW_IlL7qNYiwxWbU4"
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
