@@ -15,6 +15,6 @@
 //= require turbolinks
 //= require froala_editor.min.js
 //= require plugins/code_view.min.js
-//= require rainbow-custom.min.js
 //= require paloma
+//= require rainbow-custom.min.js
 //= require_tree .
