@@ -13,7 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require paloma
 //= require froala_editor.min.js
 //= require plugins/code_view.min.js
+//= require rainbow-custom.min.js
+//= require paloma
 //= require_tree .
