@@ -8,7 +8,7 @@
 		  <article class="blog__post">
 			  <%= link_to post, class: 'blog__link' do %>
 					<div class="blog__container">
-						<div class="blog__image" style="background-image: url(<%= asset_path(post.lead_image :medium) %>)"></div>
+						<div class="blog__image" style="background-image: url(<%= asset_path(post.lead_image :large) %>)"></div>
 					  <div class="blog__text">
 					  	<h2 class="blog__title"><%= post.title %></h2>
 					  	<span class="blog__content"><%= post.content_preview %></span>
