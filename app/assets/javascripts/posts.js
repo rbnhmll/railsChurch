@@ -17,5 +17,8 @@ PostsController.prototype.edit = function(){
 };
 
 PostsController.prototype.show = function(){
-	
+	(function(){
+		// Launch Prism highlighting
+		Prism.highlightAll();
+	})();
 };
