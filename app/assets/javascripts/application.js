@@ -16,6 +16,6 @@
 //= require froala_editor.min.js
 //= require plugins/code_view.min.js
 //= require paloma
-//= require rainbow-custom.min.js
+//= require prism
 //= require posts
 //= require_tree .
