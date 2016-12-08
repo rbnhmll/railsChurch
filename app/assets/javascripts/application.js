@@ -17,4 +17,5 @@
 //= require plugins/code_view.min.js
 //= require paloma
 //= require rainbow-custom.min.js
+//= require posts
 //= require_tree .
