@@ -16,15 +16,35 @@ body
 	background-size: cover
 	background-image: url(asset_path('hero_pattern.png'))
 	margin-top: rem(20)
-	padding: 8% 10%
+	padding: 7% 10%
 	&__title
-		font-size: rem(65)
+		padding: 2%
+		font-size: rem(35)
 		margin-bottom: 0
-		text-shadow: 5px 5px rgba($white, .75)
+		text-align: center
+		letter-spacing: rem(6px)
+		background: rgba($white,0.25)
+		box-shadow: 0 0 0px 10px rgba($caution, 0.5)
+		border: 10px solid $white
+		transform: rotate(-5deg) skew(-5deg)
+		// text-shadow: 5px 5px rgba($white, .75)
 		+media (max-width $medium-screen)
-			font-size: rem(50)
+			font-size: rem(30)
 		+media (max-width $small-screen)
-			font-size: rem(35px)
+			font-size: rem(15px)
+		&--fun
+			font-family: 'Fredoka One', sans-serif
+			font-size: rem(100)
+			text-shadow:  0.25rem -0.25rem rgba(magenta, 0.75), -0.25rem -0.25rem rgba(cyan, 0.75), 0 0.5rem rgba($caution, 0.75)
+			display: block
+			letter-spacing: rem(2px)
+			transform: rotate(5deg) skew(5deg)
+			+media (max-width $medium-screen)
+				font-size: rem(70)
+				margin: .15em 0
+			+media (max-width $small-screen)
+				font-size: rem(35px)
+				text-shadow:  0.15rem -0.15rem rgba(magenta, 0.75), -0.15rem -0.15rem rgba(cyan, 0.75), 0 0.25rem rgba($caution, 0.75)
 
 .page__title
 	margin: 0.75em 5%
@@ -88,7 +108,7 @@ div
 		content: none
 		clear: none
 
-.shrink
+.shrink header
 	padding: 0
 	opacity: .9
 	.logo__text
