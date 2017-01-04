@@ -1,11 +1,7 @@
-.blog
+.blog,
+.about
 	+section
 	position: relative
-	a
-		font-style: italic
-		color: $black
-	a:hover
-		text-decoration: underline
 
 .blog__post
 	+g-transition
@@ -94,3 +90,9 @@
 
 .fr-box.fr-basic .fr-element
 	min-height: 150px
+
+.rte a
+	font-style: italic
+	color: $black
+	&:hover
+		text-decoration: underline
