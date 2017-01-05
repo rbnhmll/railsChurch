@@ -24,8 +24,8 @@
     <%= f.text_area :bio %>
   </div>
   <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.label :email, "Email" %>
+    <%= f.text_field :email, :placeholder => "(optional)" %>
   </div>
   <div class="actions">
     <%= f.submit class: 'btn btn--safe' %>

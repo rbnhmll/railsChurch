@@ -1,4 +1,23 @@
-<h1>Contributors#index</h1>
-<p>Find me in app/views/contributors/index.html.erb</p>
+<h2>Contributors</h2>
+
+<div class="contributors">
+	<% if @contributors.length > 0 %>
+		<% @contributors.each do |contributor| %>
+		  <article class="contributor">
+			  <div class="contributor__content">
+			  	<p><%= contributor.name %></p>
+			  	<p><%= contributor.bio %></p>
+			  	<p><%= contributor.email %></p>
+			  </div>
+		  </article>
+		  <div class="admin__buttons">
+		  	<%= link_to 'Edit', edit_contributor_path(contributor), class: 'btn btn--safe btn--small' %>
+		  	<%= link_to 'Destroy', contributor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn--danger btn--small' %>
+	  	</div>
+		<% end %>
+	<% elsif %>
+		<p>There are no contributors.</p>
+	<% end %>
+</div>
 
 <%= link_to 'New Contributor', new_contributor_path, class:'btn btn--safe' %>

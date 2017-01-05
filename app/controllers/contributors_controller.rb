@@ -3,6 +3,7 @@ class ContributorsController < ApplicationController
   before_action :set_contributor, only: [:show, :edit, :update, :destroy]
 
   def index
+  	@contributors = Contributor.all
   end
 
   def new
@@ -14,7 +15,7 @@ class ContributorsController < ApplicationController
 
     respond_to do |format|
       if @contributor.save
-        format.html { redirect_to @contributor, notice: 'contributor was successfully created.' }
+        format.html { redirect_to :contributors, notice: 'contributor was successfully created.' }
         format.json { render :show, status: :created, location: @contributor }
       else
         format.html { render :new }
