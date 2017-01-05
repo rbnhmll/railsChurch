@@ -1,5 +1,23 @@
-.contributor
+.contributors
 	+section
-	+g-transition
+	.admin__buttons
+		margin-bottom
+
+.contributor
+	+clearfix
+	+card
+	+card-content
+	+display(flex)
+	align-items: center
 	&:hover
 		+card-hover
+
+.contributor__link
+	color: $black
+
+.contributor__image
+	+span-columns(2)
+	
+
+.contributor__content
+	+span-columns(10)

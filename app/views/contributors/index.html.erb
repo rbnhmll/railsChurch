@@ -3,13 +3,20 @@
 <div class="contributors">
 	<% if @contributors.length > 0 %>
 		<% @contributors.each do |contributor| %>
-		  <article class="contributor">
-			  <div class="contributor__content">
-			  	<p><%= contributor.name %></p>
-			  	<p><%= contributor.bio %></p>
-			  	<p><%= contributor.email %></p>
-			  </div>
-		  </article>
+		  <%= link_to contributor, class: 'contributor__link' do %>
+		  	<article class="contributor">
+		  		<div class="contributor__image">
+						<%= image_tag contributor.avatar.url(:thumb), class: "avatar" %>
+					</div>
+				  <div class="contributor__content">
+				  	<h2>Written by <%= contributor.name %></h2>
+				  	<p><%= contributor.bio %></p>
+				  	<p><%= contributor.email %></p>
+				  	<p><%= contributor.site %></p>
+				  	<p><%= contributor.twitter %></p>
+				  </div>
+		  	</article>
+	  	<% end %>
 		  <div class="admin__buttons">
 		  	<%= link_to 'Edit', edit_contributor_path(contributor), class: 'btn btn--safe btn--small' %>
 		  	<%= link_to 'Destroy', contributor, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn--danger btn--small' %>
@@ -20,4 +27,5 @@
 	<% end %>
 </div>
 
-<%= link_to 'New Contributor', new_contributor_path, class:'btn btn--safe' %>
+<%= link_to 'Add Contributor', new_contributor_path, class:'btn btn--safe' %>
+

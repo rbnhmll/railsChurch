@@ -27,6 +27,18 @@ class ContributorsController < ApplicationController
   def edit
   end
 
+  def update
+    respond_to do |format|
+      if @contributor.update(contributor_params)
+        format.html { redirect_to @contributor, notice: 'Contributor was successfully updated.' }
+        format.json { render :show, status: :ok, location: @contributor }
+      else
+        format.html { render :edit }
+        format.json { render json: @contributor.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def show
   end
 
@@ -46,7 +58,7 @@ class ContributorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contributor_params
-      params.require(:contributor).permit(:name, :email, :bio, :avatar)
+      params.require(:contributor).permit(:name, :email, :bio, :avatar, :site, :twitter)
     end
 
 end
