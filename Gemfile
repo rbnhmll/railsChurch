@@ -22,6 +22,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
 gem 'wysiwyg-rails'
 
+group :development do
+  gem 'browser_sync_rails'
+end
+
 group :development, :test do
 	gem 'better_errors'
   gem 'byebug'

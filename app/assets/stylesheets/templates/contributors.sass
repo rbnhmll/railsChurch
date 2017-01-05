@@ -1,23 +1,26 @@
 .contributors
 	+section
 	.admin__buttons
-		margin-bottom
+		margin-bottom: rem(20)
 
 .contributor
-	+clearfix
 	+card
 	+card-content
 	+display(flex)
 	align-items: center
-	&:hover
-		+card-hover
+	margin-bottom: 0
 
-.contributor__link
-	color: $black
+.contributor__container
+	+display(flex)
 
 .contributor__image
-	+span-columns(2)
-	
+	margin-right: rem(20)
+	max-width: rem(150)
 
-.contributor__content
-	+span-columns(10)
+.contributor__text
+	flex: 1
+
+.contributor__social i
+	border-radius: 50%
+	color: $green
+	font-size: rem(30)

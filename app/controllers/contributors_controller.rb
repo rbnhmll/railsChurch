@@ -30,16 +30,13 @@ class ContributorsController < ApplicationController
   def update
     respond_to do |format|
       if @contributor.update(contributor_params)
-        format.html { redirect_to @contributor, notice: 'Contributor was successfully updated.' }
+        format.html { redirect_to :contributors, notice: 'Contributor was successfully updated.' }
         format.json { render :show, status: :ok, location: @contributor }
       else
         format.html { render :edit }
         format.json { render json: @contributor.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  def show
   end
 
   def destroy
