@@ -24,6 +24,7 @@ gem 'wysiwyg-rails'
 
 group :development do
   gem 'browser_sync_rails'
+  gem 'web-console', '~> 2.0'
 end
 
 group :development, :test do
@@ -32,7 +33,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 	gem 'sqlite3'
   gem 'spring'
-  gem 'web-console', '~> 2.0'
 end
 
 group :production do
