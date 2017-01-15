@@ -11,6 +11,7 @@ class Post < ActiveRecord::Base
   validates :title, presence: true
 
 	belongs_to :user
+	has_one :contributor
 
 	# A truncation  and sanitation method for Post.content
 	def content_preview

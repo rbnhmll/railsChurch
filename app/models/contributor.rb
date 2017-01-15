@@ -1,4 +1,5 @@
 class Contributor < ActiveRecord::Base
+	belongs_to :post
 	has_attached_file :avatar,
 		:default_url => "anon.jpg",
 		styles: {
