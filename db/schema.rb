@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115162305) do
+ActiveRecord::Schema.define(version: 20170115162708) do
 
   create_table "contributors", force: :cascade do |t|
     t.string   "name"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20170115162305) do
     t.integer  "lead_image_file_size"
     t.datetime "lead_image_updated_at"
     t.integer  "contributor_id"
+    t.boolean  "show_contributor"
   end
 
   create_table "users", force: :cascade do |t|

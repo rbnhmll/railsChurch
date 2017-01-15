@@ -14,16 +14,20 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-
+    if @post.contributor_id != nil
+      @contributor = Contributor.find(@post.contributor_id)
+    end
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+    @contributors = Contributor.all
   end
 
   # GET /posts/1/edit
   def edit
+    @contributors = Contributor.all
   end
 
   # POST /posts
@@ -74,7 +78,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content, :active, :lead_image)
+      params.require(:post).permit(:title, :content, :active, :lead_image, :show_contributor, :contributor_id)
     end
 
 end

@@ -26,9 +26,19 @@
     <%= f.text_area :content, id: 'edit', rows: "20" %>
   </div>
   <div class="field active">
-    <%= f.label :active, class: "active__label" %>
+    <%= f.label :active, "Active?", class: "active__label" %>
     <%= f.check_box :active, class: "active__check" %>
   </div>
+<% if  @contributors.length > 0 %>
+  <div class="field show-contributor">
+    <%= f.label :show_contributor, "Show Contributor?", class: "show-contributor__label" %>
+    <%= f.check_box :show_contributor, class: "show-contributor__check" %>
+  </div>
+  <div class="field contributor-id">
+    <%= f.label :contributor_id, class: "contributorid__label" %>
+    <%= f.select :contributor_id, @contributors.map{ |c| [c.name, c.id]}, :include_blank => "-- No contributor --" %>  
+  </div>
+<% end %>
   <div class="actions">
     <%= f.submit class: 'btn btn--safe' %>
   </div>

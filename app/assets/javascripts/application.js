@@ -18,4 +18,5 @@
 //= require paloma
 //= require prism
 //= require posts
+//= require target.min
 //= require_tree .

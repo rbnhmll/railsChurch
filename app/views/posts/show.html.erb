@@ -10,6 +10,13 @@
 	<div class="blog__content rte fr-view">
 		<%= raw @post.content %>
 	</div>
+<% if @post.show_contributor %>
+	<div>
+		<% if @contributor != nil %>
+			<%= render partial: 'contributors/contributor_card', locals: {contributor: @contributor} %>
+		<% end %>
+	</div>
+<% end %>
 	
 	<% if user_signed_in? %>
 		<p>
