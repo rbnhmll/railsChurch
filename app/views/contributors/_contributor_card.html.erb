@@ -1,0 +1,15 @@
+<article class="contributor">
+	<div class="contributor__container">
+		<div class="contributor__image">
+			<%= image_tag contributor.avatar.url(:thumb), class: "avatar" %>
+		</div>
+	  <div class="contributor__text">
+	  	<h3 class="contributor__title">Written by <%= contributor.name %></h3>
+	  	<p><%= contributor.bio %></p>
+	  	<div class="contributor__social">
+	  		<a href="<%= contributor.site %>" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
+	  		<a href="https://twitter.com/<%= contributor.twitter %>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+	  	</div>
+	  </div>
+	</div>
+</article>
