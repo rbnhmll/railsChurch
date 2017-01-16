@@ -18,9 +18,11 @@
 <% end %>
 	
 	<% if user_signed_in? %>
-		<p>
+		<p class="published-tag">
 		  <strong>Active:</strong>
-		  <%= @post.active %>
+		  <span class="<%= @post.active ? 'active' : 'inactive' %>">
+		  	<%= @post.active %>
+	  	</span>
 		</p>
 	
 		<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn--safe' %>
