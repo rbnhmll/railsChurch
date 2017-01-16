@@ -6,24 +6,38 @@
 .contributor
 	+card
 	+card-content
-	+display(flex)
+	// +display(flex)
 	align-items: center
 	margin-bottom: 0
 
 .contributor__container
 	+display(flex)
+	+media (max-width $small-screen)
+		flex-direction: column
+		align-items: center
 
 .contributor__image
+	+display(block)
 	margin-right: rem(20)
 	max-width: rem(150)
-	+display(block)
 	line-height: 1
+	+media (max-width $small-screen)
+		max-width: rem(100)
+		margin-right: rem(0)
 
 .contributor__text
 	flex: 1
 	+display(flex)
 	flex-direction: column
 	justify-content: space-between
+	p
+		+media (max-width $small-screen)
+			font-size: rem(14)
+
+.contributor__title
+	+media (max-width $small-screen)
+		text-align: center
+		font-size: rem(16)
 
 .contributor__social i
 	border-radius: 50%
