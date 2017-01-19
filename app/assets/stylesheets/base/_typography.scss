@@ -37,6 +37,9 @@ a {
   &:hover {
     color: shade($action-color, 25%);
   }
+  &:visited {
+    color: $dark-grey;
+  }
 }
 
 hr {
