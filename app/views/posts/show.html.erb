@@ -5,7 +5,7 @@
 	<h2 class="blog__title">
 	  <%= @post.title %>
 	</h2>
-	<!-- <small><%= @post.created_at.strftime("%Y-%m-%d") %></small> -->
+	<p class="blog__date"><%= @post.updated_at.strftime("%A %B %d, %Y") %></p>
 	
 	<div class="blog__content rte fr-view">
 		<%= raw @post.content %>
