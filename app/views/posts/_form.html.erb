@@ -1,3 +1,5 @@
+<%= tinymce %>
+
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -23,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :content %>
-    <%= f.text_area :content, id: 'edit', rows: "20" %>
+    <%= f.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
   </div>
   <div class="field active">
     <%= f.label :active, "Active?", class: "active__label" %>

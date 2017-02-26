@@ -13,10 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require froala_editor.min.js
-//= require plugins/code_view.min.js
 //= require paloma
 //= require prism
 //= require posts
 //= require target.min
+//= require tinymce
 //= require_tree .

@@ -21,7 +21,7 @@ var PostsController = Paloma.controller('Posts');
 PostsController.prototype.new = function(){
 	(function(){
 		// Launch Froala Rich text editor
-		$('#edit').froalaEditor();
+		// $('#edit').froalaEditor();
 		handleDropdown();
 	})();
 };
@@ -29,7 +29,7 @@ PostsController.prototype.new = function(){
 PostsController.prototype.edit = function(){
 	(function(){
 		// Launch Froala Rich text editor
-		$('#edit').froalaEditor();
+		// $('#edit').froalaEditor();
 		handleDropdown();
 	})();
 };
