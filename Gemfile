@@ -17,10 +17,10 @@ gem 'paperclip', '~> 4.3'
 gem 'rails', '4.2.5.1'
 gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'tinymce-rails'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
-gem 'wysiwyg-rails'
 
 group :development do
   gem 'browser_sync_rails'
