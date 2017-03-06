@@ -3,6 +3,10 @@
 	+section
 	position: relative
 
+.blog
+	.blog__title
+		font-size: rem(30)
+
 .blog__post
 	+card
 	+span-columns(4)
@@ -37,7 +41,8 @@
 
 .blog__title
 	font-size: rem(20)
-	min-height: rem(50)
+	.blog__text &
+		min-height: rem(50)
 
 .blog__date
 	font-size: 14px
@@ -56,9 +61,6 @@
 	padding: rem(10) rem(20)
 	border: rem(1) solid $light-grey
 	border-top: none
-
-.lead_image
-	// margin-top: rem(20)
 
 .unpublished
 	width: 90px
@@ -85,7 +87,6 @@
 	position: absolute
 	right: -40px
 	text-align: center
-	transform: rotate(-45deg)
 	transform: rotate(-45deg)
 	width: 140px
 	&--show
