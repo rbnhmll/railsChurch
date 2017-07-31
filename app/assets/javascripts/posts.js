@@ -4,15 +4,15 @@ function handleDropdown() {
 
 	if (showContributor.checked) contributorDropdown.classList.add('show');
 
-	showContributor.addEventListener('change', toggleDropdown);
-	
 	function toggleDropdown(e) {
 		if (e.target.checked) {
 			contributorDropdown.classList.add('show');
 		} else {
 			contributorDropdown.classList.remove('show');
-		}
-	}
+    }
+  }
+
+  showContributor.addEventListener('change', toggleDropdown);
 }
 
 // Paloma page specific handlers
@@ -24,13 +24,13 @@ PostsController.prototype.new = function(){
 	})();
 };
 
-PostsController.prototype.edit = function(){
+PostsController.prototype.edit = function() {
 	(function(){
 		handleDropdown();
 	})();
 };
 
-PostsController.prototype.show = function(){
+PostsController.prototype.show = function() {
 	(function(){
 		// Launch Prism highlighting
 		Prism.highlightAll();
