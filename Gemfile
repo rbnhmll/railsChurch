@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'autoprefixer-rails'
+gem 'autoprefixer-rails', '~> 6.7', '>= 6.7.7'
 gem 'aws-sdk-v1'
 gem 'bitters'
 gem 'bourbon'

@@ -37,9 +37,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    autoprefixer-rails (6.3.1)
+    autoprefixer-rails (6.7.7.2)
       execjs
-      json
     aws-sdk-v1 (1.66.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
@@ -183,8 +182,8 @@ GEM
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
     sass (3.4.22)
-    sass-rails (5.0.4)
-      railties (>= 4.0.0, < 5.0)
+    sass-rails (5.0.6)
+      railties (>= 4.0.0, < 6)
       sass (~> 3.1)
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
@@ -226,7 +225,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails
+  autoprefixer-rails (~> 6.7, >= 6.7.7)
   aws-sdk-v1
   better_errors
   bitters
@@ -247,7 +246,7 @@ DEPENDENCIES
   rails (= 4.2.5.1)
   rails_12factor
   rspec-rails (~> 3.5)
-  sass-rails (~> 5.0)
+  sass-rails (~> 5.0, >= 5.0.6)
   sdoc (~> 0.4.0)
   spring
   sqlite3
@@ -258,4 +257,4 @@ DEPENDENCIES
   will_paginate
 
 BUNDLED WITH
-   1.14.3
+   1.14.6
