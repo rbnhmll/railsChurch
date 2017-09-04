@@ -1,34 +1,62 @@
 .blog,
 .about
-	+section
-	position: relative
+	@supports (display: grid)
+		+display(grid)
+		grid-gap: 1.5vw
+		grid-template-columns: repeat(3, 1fr)
+		grid-auto-rows: minmax(500px, auto)
+		background: $white
+		padding: 5%
+		margin: rem(20) 0
+		+media (max-width $medium-screen)
+			grid-template-columns: repeat(2, 1fr)
+		+media (max-width $small-screen)
+			grid-template-columns: repeat(1, 1fr)			
+	@supports not (display: grid)	
+		+section
+		position: relative
 
 .post__show
+	+display(block)
 	.blog__title
 		font-size: rem(30)
 
 .blog__post
-	+card
-	+span-columns(4)
-	+omega(3n)
+	+card	
+	@supports (display: grid)
+		+display(flex)
+		+flex-direction(column)
+	@supports not (display: grid)
+		+span-columns(4)
+		+omega(3n)
+		+media (max-width $medium-screen)
+			+omega(2n)
+			+omega-reset(3n)
+			+span-columns(6)
+
+		+media (max-width $small-screen)
+			+span-columns(12)
 	position: relative
 	&:hover
 		+card-hover
 		.unpublished__banner
 			opacity: 1
-	a
+	.blog__link
+		@supports (display: grid)
+			+display(flex)
+			+flex-direction(column)
+			+flex(1)
 		+display(inline-block)
 		color: $black
 	
-	+media (max-width $medium-screen)
-		+omega(2n)
-		+omega-reset(3n)
-		+span-columns(6)
-
-	+media (max-width $small-screen)
-		+span-columns(12)
 .blog__link
 	width: 100%
+
+.blog__container
+	@supports (display: grid)
+		+display(flex)
+		+flex-direction(column)
+		+flex(1)
 
 .blog__image
 	background-position: center
@@ -36,13 +64,16 @@
 	height: 200px
 
 .blog__text
+	@supports (display: grid)
+		+flex(1)
 	+card-content
 	border-top: none
 
 .blog__title
 	font-size: rem(20)
 	.blog__text &
-		min-height: rem(50)
+		@supports not (display: grid)
+			min-height: rem(50)
 
 .blog__date
 	font-size: 14px
@@ -50,14 +81,19 @@
 	margin-bottom: 40px
 
 .blog__content
-	+display(block)
-	min-height: rem(220)
-	+media (max-width $medium-screen)
-		min-height: rem(175)
-	+media (max-width $small-screen)
-		min-height: rem(100)
+	@supports not (display: grid)	
+		+display(block)
+		min-height: rem(220)
+		+media (max-width $medium-screen)
+			min-height: rem(175)
+		+media (max-width $small-screen)
+			min-height: rem(100)
 
 .admin__buttons
+	@supports (display: grid)
+		+display(flex)
+		a + a
+			margin-left: 5px
 	padding: rem(10) rem(20)
 	border: rem(1) solid $light-grey
 	border-top: none
