@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'autoprefixer-rails', '~> 6.7', '>= 6.7.7'
-gem 'aws-sdk-v1'
+gem 'aws-sdk', '< 3.0'
 gem 'bitters'
 gem 'bourbon'
 gem 'coffee-rails', '~> 4.1.0'
@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'neat'
 gem 'paloma', '~> 5.0'
-gem 'paperclip', '~> 4.3'
+gem 'paperclip', '~> 5.2'
 gem 'rails', '~> 4.2.7.1'
 gem 'sass-rails', '~> 5.0', '>= 5.0.6'
 gem 'sdoc', '~> 0.4.0', group: :doc

@@ -3,15 +3,11 @@
 	@supports (display: grid)
 		+display(grid)
 		grid-gap: 1.5vw
-		grid-template-columns: 1fr 1fr 1fr
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
 		grid-auto-rows: minmax(500px, auto)
 		background: $white
 		padding: 5%
-		margin: rem(20) 0
-		+media (max-width $medium-screen)
-			grid-template-columns: 1fr 1fr
-		+media (max-width $small-screen)
-			grid-template-columns: 1fr			
+		margin: rem(20) 0	
 	@supports not (display: grid)	
 		+section
 		position: relative
@@ -21,6 +17,7 @@
 
 .post__show
 	+display(block)
+	position: relative
 	.blog__title
 		font-size: rem(30)
 
@@ -32,6 +29,7 @@
 	@supports not (display: grid)
 		+span-columns(4)
 		+omega(3n)
+		margin-bottom: rem(25)
 		+media (max-width $medium-screen)
 			+omega(2n)
 			+omega-reset(3n)
