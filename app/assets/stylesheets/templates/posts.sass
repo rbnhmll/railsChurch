@@ -24,7 +24,7 @@
 .blog__post
 	+card	
 	@supports (display: grid)
-		+display(flex)
+		display: flex
 		+flex-direction(column)
 	@supports not (display: grid)
 		+span-columns(4)
@@ -44,7 +44,7 @@
 			opacity: 1
 	.blog__link
 		@supports (display: grid)
-			+display(flex)
+			display: flex
 			+flex-direction(column)
 			+flex(1)
 		+display(inline-block)
@@ -55,7 +55,7 @@
 
 .blog__container
 	@supports (display: grid)
-		+display(flex)
+		display: flex
 		+flex-direction(column)
 		+flex(1)
 
@@ -91,7 +91,7 @@
 
 .admin__buttons
 	@supports (display: grid)
-		+display(flex)
+		display: flex
 		a + a
 			margin-left: 5px
 	padding: rem(10) rem(20)
