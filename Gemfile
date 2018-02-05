@@ -15,7 +15,7 @@ gem 'neat'
 gem 'paloma', '~> 5.0'
 gem 'paperclip', '~> 5.2'
 gem 'rails', '~> 4.2.7.1'
-gem 'sass-rails', '~> 5.0', '>= 5.0.6'
+gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'tinymce-rails'
 gem 'turbolinks'
